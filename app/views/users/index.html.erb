@@ -1,0 +1,28 @@
+<div class="container">
+
+<h1>All users list</h1>
+<table class="table well">
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Phone</th>
+		<th>Email</th>
+		<th>Action</th>
+	</tr>
+
+<% @users.each do |user| %>
+	<tr>
+		<td><%= user.first_name %></td>
+		<td><%= user.last_name %></td>
+		<td><%= user.phone %></td>
+		<td><%= user.email %></td>
+		<td><%= link_to 'User details', user_path(user) %></td>
+	</tr>
+<% end %>
+</table>
+
+<%= link_to 'Create Event', new_user_event_path(current_user.id) %> |
+
+
+<%= link_to 'User details', users_path %>
+</div><!--/.container-->

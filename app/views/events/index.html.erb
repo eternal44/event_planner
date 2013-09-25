@@ -1,0 +1,21 @@
+<h1>hi</h1>
+
+<h1>Events list</h1>
+<table class="table well">
+	<tr>
+		<th>location</th>
+		<th>Time</th>
+		<th>Date</th>
+	</tr>
+
+<% @events.each do |event| %>
+	<tr>
+		<td><%= event.place %></td>
+		<td><%= event.time %></td>
+		<td><%= event.date %></td>
+		<td><%= link_to 'Add guests', users_path %></td>
+		<td><%= link_to 'Delete', [event.user, event], method: :delete, data: { confirm: "Are you sure?" } %></td>
+
+	</tr>
+<% end %>
+</table>
