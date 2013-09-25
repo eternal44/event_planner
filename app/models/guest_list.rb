@@ -4,5 +4,8 @@ class GuestList < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :event
+
+  has_many :users
+  has_many :events
   # attr_accessible :title, :body
 end

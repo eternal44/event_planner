@@ -14,8 +14,7 @@
 		<td><%= event.place %></td>
 		<td><%= event.time %></td>
 		<td><%= event.date %></td>
-		<td><%= link_to 'Add guests', users_path %></td>
-		<td><%= link_to 'Delete', [event.user, event], method: :delete, data: { confirm: "Are you sure?" } %></td>
+		<td><%= link_to 'Add guests', new_guest_list_path %></td>
 
 	</tr>
 <% end %>

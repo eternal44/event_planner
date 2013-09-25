@@ -1,6 +1,7 @@
 EventCoordinator::Application.routes.draw do
 
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :guest_lists
 
   resources :users do
     resources :events
