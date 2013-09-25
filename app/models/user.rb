@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :first_name, :last_name, :email, :phone, :password, :password_confirmation
 
-  has_many :events, :dependent => :destroy
+  has_many :events, through: :guest_lists,
+           :dependent => :destroy
 
   
 

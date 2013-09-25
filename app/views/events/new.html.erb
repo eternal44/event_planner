@@ -17,22 +17,26 @@
   </div>
   <% end %>
   <p>
+    <%= f.label :event_title %><br>
+    <%= f.text_field :event_title %>
+  </p>
+  <p>
     <%= f.label :time %><br>
     <%= f.text_field :time %>
   </p>
   <p>
-    <%= f.label :date %><br>
+    <%= f.label :date, :html => { :id =>"datepicker" } %><br>
     <%= f.text_field :date %>
+    <%= javascript_include_tag "application" %>
   </p>
   <p>
     <%= f.label :place %><br>
     <%= f.text_field :place %>
   </p>
-
-
-
-
   <p>
     <%= f.submit %>
   </p>
 <% end %>
+
+<%= link_to 'Back', users_path %>
+

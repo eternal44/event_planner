@@ -1,6 +1,7 @@
 class Event < ActiveRecord::Base
   belongs_to :user
-  attr_accessible :date, :place, :time
+  attr_accessible :date, :place, :time, :event_title
+  has_many :users, :through => :guest_list
 
   validates :date, 		:presence 	=> true,
   						:length 	=> { minimum: 5 }
@@ -8,4 +9,6 @@ class Event < ActiveRecord::Base
   						:length 	=> { minimum: 5 }
   validates :time, 		:presence 	=> true,
   				   		:length 	=> { minimum: 5 }
+  validates :event_title, :presence 	=> true,
+  				   		:length 	=> { minimum: 5 }  				   		
 end
