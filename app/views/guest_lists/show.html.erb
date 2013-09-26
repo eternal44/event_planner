@@ -1,0 +1,28 @@
+<h1><%= @event.event_title %>'s events</h1>
+
+<div class="container">
+<table class="table well">
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Phone</th>
+		<th>Email</th>
+
+	</tr>
+
+<% @user_infos.each do |info| %>
+	<tr>
+		<td><%= info[0] %></td>		
+		<td><%= info[1] %></td>		
+		<td><%= info[2] %></td>		
+		<td><%= info[3] %></td>		
+		<td><%= link_to 'Delete' %></td>
+		
+
+
+	</tr>
+<% end %>
+</table>
+
+<%= link_to "All users", users_path %>
+</div><!--/.container-->

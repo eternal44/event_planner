@@ -1,0 +1,6 @@
+<h1>Add people to the <%= @event.event_title %> event</h1>
+
+<%= simple_form_for [@event, @guest_list] do |f| %>
+<%= f.association :user, label_method: :first_name, as: :check_boxes %>
+<%= f.button :submit %>
+<% end %>

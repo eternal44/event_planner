@@ -24,6 +24,8 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'rails-footnotes', '>= 3.7.9', :group => :development
 gem 'bootstrap-sass', '~> 2.3.1.0'
+gem 'multipluck'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
